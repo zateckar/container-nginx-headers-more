@@ -1,11 +1,9 @@
 name: Docker
 
-#   schedule:
-#    - cron: '30 8 * * 4'
-#
-
 on:
  workflow_dispatch
+#   schedule:
+#    - cron: '30 8 * * 4'
 
 jobs:
   build:
@@ -14,13 +12,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
      
-      - name: Build and push
+      - name: Build and push - Debian
         uses: mr-smithers-excellent/docker-build-push@v6
         with:
           image: docker-nginx-headers-more
           registry: ghcr.io
+          tags: stable, latest
           dockerfile: ./debian/Dockerfile
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-    
+      - name: Build and push - Alpine
+        uses: mr-smithers-excellent/docker-build-push@v6
+        with:
+          image: docker-nginx-headers-more
+          registry: ghcr.io
+          tags: stable-alpine, latest-alpine
+          dockerfile: ./alpine/Dockerfile
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
