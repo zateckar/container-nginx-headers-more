@@ -4,6 +4,9 @@ name: Docker
 # They are provided by a third-party and are governed by
 # separate terms of service, privacy policy, and support
 # documentation.
+#   schedule:
+#    - cron: '30 8 * * 4'
+#
 
 on:
  workflow_dispatch
