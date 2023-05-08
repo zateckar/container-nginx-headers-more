@@ -1,8 +1,20 @@
-# Nginx docker image with Headers more as dynamic module based on official Nginx docker image  
+# Nginx docker image with Headers more as dynamic module based on official stable Nginx docker image 
+For more info about the "Headers more" module check: https://github.com/openresty/headers-more-nginx-module
 
 ## Examples
 
-### More Set Headers
+### Load module
+
+```
+load_module /usr/lib/nginx/modules/ngx_http_headers_more_filter_module.so;
+
+http {
+    ...
+}
+```
+
+
+### Change server header
 
 ```
 http {
@@ -12,3 +24,17 @@ http {
 }
 ```
 
+### Remove server header
+
+```
+http {
+    ...
+    more_clear_headers	Server;
+    ...
+}
+```
+
+
+
+
+	
