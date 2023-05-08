@@ -1,4 +1,4 @@
-# Nginx docker image with Headers more as dynamic module based on official stable Nginx docker image 
+# Nginx container image with Headers more as dynamic module based on official stable Nginx docker image 
 For more info about the "Headers more" module check: https://github.com/openresty/headers-more-nginx-module
 
 
