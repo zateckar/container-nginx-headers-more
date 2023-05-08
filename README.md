@@ -4,7 +4,7 @@ For more info about the "Headers more" module check: https://github.com/openrest
 
 ### Get the latest stable image based on Debian
 ```
-docker pull ghcr.io/zateckar/container-nginx-headers-more:stable
+docker pull ghcr.io/zateckar/container-nginx-headers-more:latest
 ```
 
 
