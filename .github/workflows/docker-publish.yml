@@ -1,4 +1,4 @@
-name: Docker
+name: Container
 
 on:
  workflow_dispatch
@@ -15,7 +15,7 @@ jobs:
       - name: Build and push - Alpine
         uses: mr-smithers-excellent/docker-build-push@v6
         with:
-          image: docker-nginx-headers-more
+          image: container-nginx-headers-more
           registry: ghcr.io
           tags: stable-alpine, latest-alpine
           labels: nginx=1.24.0, headers-more=0.34
@@ -27,7 +27,7 @@ jobs:
       - name: Build and push - Debian
         uses: mr-smithers-excellent/docker-build-push@v6
         with:
-          image: docker-nginx-headers-more
+          image: container-nginx-headers-more
           registry: ghcr.io
           tags: stable, latest
           labels: nginx=1.24.0, headers-more=0.34
