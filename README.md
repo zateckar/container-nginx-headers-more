@@ -1,7 +1,12 @@
 # Nginx docker image with Headers more as dynamic module based on official stable Nginx docker image 
 For more info about the "Headers more" module check: https://github.com/openresty/headers-more-nginx-module
 
-## Examples
+### Get lastest stable image based on Debian
+```
+docker pull ghcr.io/zateckar/docker-nginx-headers-more:latest
+```
+
+## Nginx configuration examples
 
 ### Load module
 
