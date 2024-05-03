@@ -18,7 +18,7 @@ jobs:
           image: container-nginx-headers-more
           registry: ghcr.io
           tags: stable-alpine, latest-alpine
-          labels: nginx=1.24.0, headers-more=0.34
+          labels: nginx=1.26.0, headers-more=0.37
           dockerfile: ./alpine/Dockerfile
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
@@ -30,7 +30,7 @@ jobs:
           image: container-nginx-headers-more
           registry: ghcr.io
           tags: stable, latest
-          labels: nginx=1.24.0, headers-more=0.34
+          labels: nginx=1.26.0, headers-more=0.37
           dockerfile: ./debian/Dockerfile
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
